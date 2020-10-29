@@ -82,6 +82,8 @@ def train_test_plot (dataset, features_list):
     title = "Actual and predicted values of SP500 - RMSE = {}".format(round(rmse,2))
     ax1.set_title(title)
     ax1.legend(loc = 'upper left')
+    plt.savefig('sp500_prediction.png')
     plt.show()
+    
 
 train_test_plot(sphist, ['avg_past5_roll','std_past5','ratio_avg','ratio_std'])
